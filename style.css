@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-VariableFont_slnt_wght.ttf");
+  font-weight: 400 600 700;
+  font-display: swap;
+}
+:root {
+  --Green: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-700: hsl(0, 0%, 20%);
+  --Grey-800: hsl(0, 0%, 12%);
+  --Grey-900: hsl(0, 0%, 8%);
+  --Spacing-50: 14px;
+  --Spacing-100: 20px;
+  --Spacing-150: 28px;
+  --Spacing-200: 36px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  font-size: 14px;
+  background-color: var(--Grey-900);
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  width: 348px;
+  height: 548px;
+  padding: var(--Spacing-150);
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  background-color: var(--Grey-800);
+  color: var(--White);
+  border-radius: var(--Spacing-50);
+  .profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .avatar {
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .name {
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      font-size: var(--Spacing-150);
+    }
+    .location {
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      font-size: var(--Spacing-50);
+      color: var(--Green);
+    }
+    .description {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: var(--Spacing-50);
+      margin-top: var(--Spacing-100);
+    }
+  }
+  ul {
+    list-style: none;
+    width: 276px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--Spacing-50);
+    li {
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      font-size: var(--Spacing-50);
+      line-height: var(--Spacing-200);
+      text-align: center;
+      height: var(--Spacing-200);
+      background-color: var(--Grey-700);
+      width: 100%;
+      border-radius: var(--Spacing-50);
+    }
+    li:hover {
+      background-color: var(--Green);
+      cursor: pointer;
+      color: var(--Grey-900);
+    }
+  }
+}
+.attribution {
+  font-size: 11px;
+  position: absolute;
+  bottom: var(--Spacing-50);
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--White);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (max-width: 420px) {
+  .container {
+    padding: var(--Spacing-100);
+  }
+  .profile {
+    .avatar {
+      width: 72px;
+      height: 72px;
+    }
+    .name {
+      font-size: var(--Spacing-100);
+    }
+    .location {
+      font-size: var(--Spacing-50);
+    }
+    .description {
+      font-size: var(--Spacing-50);
+    }
+  }
+}
